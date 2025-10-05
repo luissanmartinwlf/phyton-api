@@ -90,4 +90,4 @@ docker run --rm -p 5000:5000 lonewolff1/python-api:1.0
 | `RUN groupadd ... && useradd ...` | **(Seguridad)** Crea un grupo yun usuario sin privilegios para ejecutar la aplicación. |
 | `RUN chown -R appuser:appgroup /app` | **(Seguridad)** Asigna la propiedad de los archivos al nuevo usuario. |
 | `USER appuser` | **(Seguridad)** Cambia al usuario sin privilegios. El contenedor ya no corre como `root`. |
-| `ENTRYPOINT ["gunicorn", ...]` | **(Producción)** Inicia la aplicación usando el servidor Gunicorn, que es robusto y eficiente. |
+| `ENTRYPOINT ["gunicorn", ...]` | **(Producción)** Inicia la aplicación usando el servidor Gunicorn. |
