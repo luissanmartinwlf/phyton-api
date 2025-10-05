@@ -81,7 +81,7 @@ docker run --rm -p 5000:5000 lonewolff1/python-api:1.0
 ## Explicación del `Dockerfile`
 
 
-| Comando | Descripcièn |
+| Comando | Descripción |
 | :--- | :--- |
 | `ARG PYTHON_VERSION=3.9` | Hace que la versión de Python sea un argumento flexible durante la construcción. |
 | `LABEL maintainer="..."` | Añade metadatos a la imagen para su documentación y organización. |
