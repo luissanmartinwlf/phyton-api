@@ -1,12 +1,12 @@
 # Proyecto: API en Python Containerizada con Docker
 
-Este proyecto es parte de una actividad académica para la asignatura de Contenedores. El objetivo es crear una API web simple con Python y Flask, y containerizarla utilizando Docker, siguiendo las mejores prácticas de seguridad y producción.
+El objetivo es crear una API web simple con Python y Flask, y containerizarla utilizando Docker.
 
 ---
 
 ## Tecnologías Utilizadas
 
-* **Python 3.9**: Lenguaje de programación base.
+* **Python 3.9**: Lenguaje de programacion base.
 * **Flask**: Micro-framework para crear la API web.
 * **Gunicorn**: Servidor WSGI de nivel de producción para ejecutar la aplicación.
 * **Docker**: Plataforma para la containerización de la aplicación.
@@ -68,9 +68,9 @@ Deberías recibir una respuesta JSON como esta:
 
 ---
 
-## 🐳 Imagen en Docker Hub
+## Imagen en Docker Hub
 
-Una imagen pre-construida de este proyecto está disponible públicamente en Docker Hub. Puedes ejecutarla directamente sin necesidad de construirla:
+Una imagen pre-construida de este proyecto está disponible públicamente en Docker Hub.:
 
 ```bash
 docker run --rm -p 5000:5000 lonewolff1/python-api:1.0
@@ -78,9 +78,8 @@ docker run --rm -p 5000:5000 lonewolff1/python-api:1.0
 
 ---
 
-## 📄 Explicación del `Dockerfile`
+## Explicación del `Dockerfile`
 
-El `Dockerfile` está diseñado para ser seguro y eficiente. A continuación se detallan los comandos más importantes:
 
 | Comando | Propósito |
 | :--- | :--- |
@@ -88,7 +87,7 @@ El `Dockerfile` está diseñado para ser seguro y eficiente. A continuación se 
 | `LABEL maintainer="..."` | Añade metadatos a la imagen para su documentación y organización. |
 | `ENV PYTHONDONT...` | Variables de entorno para optimizar el funcionamiento de Python en Docker. |
 | `WORKDIR /app` | Establece el directorio de trabajo principal dentro del contenedor. |
-| `RUN groupadd ... && useradd ...` | **(Seguridad)** Crea un grupo y un usuario sin privilegios para ejecutar la aplicación. |
+| `RUN groupadd ... && useradd ...` | **(Seguridad)** Crea un grupo yun usuario sin privilegios para ejecutar la aplicación. |
 | `RUN chown -R appuser:appgroup /app` | **(Seguridad)** Asigna la propiedad de los archivos al nuevo usuario. |
 | `USER appuser` | **(Seguridad)** Cambia al usuario sin privilegios. El contenedor ya no corre como `root`. |
 | `ENTRYPOINT ["gunicorn", ...]` | **(Producción)** Inicia la aplicación usando el servidor Gunicorn, que es robusto y eficiente. |
